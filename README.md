@@ -9,6 +9,8 @@
 
 
 ### Execution
+Chage into the folder src, i.e. `cd src`.  
+
 Run `python3 execute.py` to execute a simple example. This will create a folder logs at the root of the repository. The configuration parameters can be changed directly in the file `execute.py`.
 
 For normal execution, use the following arguments:  
