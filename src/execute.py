@@ -1,8 +1,7 @@
-#!/home/optimi/bzfroess/work/Python-3.7.1/opt/python
 from model_boundd import MIPwithBounds
 from check_solution import check_sol
 import logging
-from os import listdir, path
+from os import listdir, path, makedirs
 import datetime
 import sys
 import ast
@@ -10,18 +9,7 @@ import ast
 
 if __name__ == "__main__":
 
-    directory1_out = "../benchmarks/ACAS/"
-    directory2_out = "../../benchmarks/scip/ACAS/"
-    directory3_out = "../benchmarks/twinLadder/"
-    directory4_out = "../benchmarks/sherlock/"
-    directory5_out = "../benchmarks/mnist/"
-    directory6_out = "../../benchmarks/scip/"
-    directory7_out = "../../benchmarks/scip/linear_acas/"
-
-    #####################
-    # General Parameters
-    #####################
-
+    # read in input file and configuration, set up logging directories
     if len(sys.argv) == 4:
         filepath = sys.argv[1]
         run_logs_folder = path.dirname(sys.argv[2])
@@ -30,30 +18,17 @@ if __name__ == "__main__":
             params = ast.literal_eval(s)
         result_log_path = sys.argv[2] + ".resultlog"
         run_log_filename = path.basename(sys.argv[2]) + ".runlog"
+    
+    # if arguments are not provided, run an example file and use paramters as below
     else:
-        run_logs_folder = "../logs/run_logs/"
-        result_log_path = "../logs/results_after_bugs.log"
+        makedirs("../logs", exist_ok=True)
+        run_logs_folder = "../logs"
+        result_log_path = "../logs/results.log"
+        filepath = "rlv_test"
 
-        #filepath = directory_out + "reluBenchmark0.423880100True25s_UNSAT.rlv"
-        #filepath = directory_out + "reluBenchmark0.256556034088s_SAT.rlv"
-        #filepath = directory5_out + "mnist_24_image2_5.rlv"
-        #filepath = directory6_out + "mnist_joint/mnist_24_image11_5.rlv"
-        #filepath = directory5_out + "mnist_24_image2_5.rlv"
-        filepath = directory1_out + "property1/1_1.rlv"
-        #filepath = directory4_out + "net_14.rlv"
-        #filepath = directory7_out + "1_1_lin_opp2_dir.rlv"
-        #filepath = directory7_out + "2_2_lin_opp2.rlv"
-        #filepath = directory4_out + "net_6.rlv"
-        #filepath = directory2_out + "property3/5_1.rlv"
-        #filepath = directory1_out + "property7/property_4.rlv"
-        #filepath = directory2_out + "property2/2_2.rlv"
-        #filepath = directory2_out + "property5/property.rlv"
-        #filepath = directory2_out + "property10/property.rlv"
-        #filepath = directory2_out + "property9/property_0.rlv"
-        #filepath = "rlv_test2"
-        #filepath = directory4_out + "net_0.rlv"
-        #filepath = directory1_out + "property8/property.rlv"
-        #filepath = directory2_out + "property1/2_2.rlv"
+        #####################
+        # General Parameters
+        #####################
 
         params = {}
         params["eps"] = 5*1e-8
