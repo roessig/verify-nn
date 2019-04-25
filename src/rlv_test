@@ -1,0 +1,9 @@
+Input inX0
+ReLU relu1 0.0 1.0 inX0
+ReLU relu2 0.0 1.0 inX0
+Linear lina 0.0 1.1 relu1 -1.2 relu2
+Assert <= 3.0 1.0 inX0
+Assert >= 5.0 1.0 inX0
+AssertOut >= -0.51 1.0 lina
+#AssertOr >= 10 1.0 lina
+#AssertOr <= 5.8 1.0 lina
