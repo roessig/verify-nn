@@ -5,7 +5,7 @@ This repository contains the code for my solver for verification of neural netwo
 * [BaB](https://github.com/oval-group/PLNN-verification/tree/newVersion) of Bunel et al.
 * [Reluplex](https://github.com/guykatzz/ReluplexCav2017) (for the computational experiments the [fork](https://github.com/bunelr/ReluplexCav2017/tree/e316ae8193dfe6d6f8b869e95a8502c5316b3d87) of Bunel et al. was used)
 
-and of course the test instances for our solving model based on the academic MIP solver [SCIP](scip.zib.de).
+and of course the test instances for our solving model based on the academic MIP solver [SCIP](scip.zib.de). The file format of our .rlv input files is closely oriented at the format of Ehlers used for the solver [Planet](https://github.com/progirep/planet). If you want to define your own instances, please see the file [DATAFORMAT.md](https://github.com/roessig/verify-nn/blob/master/DATAFORMAT.md). 
 
 ### Required Software
 * Linux/Unix OS (we used Ubuntu and Fedora)
