@@ -1,5 +1,12 @@
 # Verification of Neural Networks
 
+This repository contains the code for my solver for verification of neural networks as described in my Master's thesis with the same title. Furthermore, under the folder benchmarks, are the test instances which were used for the computationaly study in the thesis. This includes the test instances for
+* [Neurify](https://github.com/tcwangshiqi-columbia/Neurify)
+* [BaB](https://github.com/oval-group/PLNN-verification/tree/newVersion) of Bunel et al.
+* [Reluplex](https://github.com/guykatzz/ReluplexCav2017) (for the computational experiments the [fork](https://github.com/bunelr/ReluplexCav2017/tree/e316ae8193dfe6d6f8b869e95a8502c5316b3d87) of Bunel et al. was used)
+
+and of course the test instances for our solving model based on the academic MIP solver [SCIP](scip.zib.de).
+
 ### Required Software
 * Linux/Unix OS (we used Ubuntu and Fedora)
 * Python 3.6+
@@ -17,7 +24,7 @@ to install SCIP to a custom path. Then you need to clone our fork of the PySCIPo
 ```
 (sudo) SCIPOPTDIR=/custom/scip/path python3 setup.py install
 ```
-from the repository root directory. This should install the PySCIPopt fork to the corresponding Python installation. Of course, you can use a Python virtual environment instead. Further instructions can be found here https://github.com/SCIP-Interfaces/PySCIPOpt/blob/master/INSTALL.md.
+from the repository root directory. This should install the PySCIPopt [fork](https://github.com/roessig/PySCIPOpt) to the corresponding Python installation. Of course, you can use a Python virtual environment instead. Further instructions can be found here https://github.com/SCIP-Interfaces/PySCIPOpt/blob/master/INSTALL.md.
 
 ### Execution
 Change into the folder src, i.e. `cd src`.  
