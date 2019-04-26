@@ -28,7 +28,7 @@ AssertOut <= 3.0 1.0 o1
 
 It is not necessary that input or output constraints contain only one variable, there can be arbitrarily many. The order is always (cf. https://github.com/progirep/planet/blob/master/README.md)
 ```
-Assert(Out/Or)    <=/>=     bias    coefficient   variable   coefficient   variable   coefficient    variable  ...
+Assert(Out/Or)    <=/>=     bias    coefficient   variable  coefficient    variable  ...
 ```
 If several lines with AssertOut are present, a valid counterexample for the instance must fulfill all the corresponding constraints. If several lines with AssertOr are present, a valid counterexample for the instance must fulfill only one of the corresponding constraints. Currently, our implementation is restricted such that AssertOr and AssertOut cannot be mixed in one instance. AssertOr corresponds to conjunction instances, AssertOut to disjunction instances (see Remark 7 in the Master's thesis).
 
