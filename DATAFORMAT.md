@@ -31,3 +31,5 @@ It is not necessary that input or output constraints contain only one variable, 
 Assert(Out/Or)    <=/>=     bias    coefficient   variable   coefficient   variable   coefficient    variable  ...
 ```
 If several lines with AssertOut are present, a valid counterexample for the instance must fulfill all the corresponding constraints. If several lines with AssertOr are present, a valid counterexample for the instance must fulfill only one of the corresponding constraints. Currently, our implementation is restricted such that AssertOr and AssertOut cannot be mixed in one instance. AssertOr corresponds to conjunction instances, AssertOut to disjunction instances (see Remark 7 in the Master's thesis).
+
+Many examples can be found in the folder benchmarks/scip. The instances in the subfolder linear_acas feature also input properties, that are general linear constraints.
