@@ -1,0 +1,58 @@
+The network files which are contained in subfolders of the name "ACAS" or "linear_acas" 
+under the directory "benchmarks" are adapted from the network files available
+at https://github.com/guykatzz/ReluplexCav2017. These are copyright (C)
+2016-2017 by their authors and Stanford university, and are
+distributed under the Creative Commons Attribution 4.0 International
+License (https://creativecommons.org/licenses/by/4.0/). List of authors:
+
+  Guy Katz, Stanford University.
+  Clark Barrett, Stanford University.
+  David Dill, Stanford University.
+  Kyle Julian, Stanford University.
+  Mykel Kochenderfer, Stanford University.
+
+The network files which are contained in subfolders of the name "mnist" or similar
+under the directory "benchmarks" are adapted from the MNIST neural networks available
+at https://github.com/tcwangshiqi-columbia/Neurify. These are copyright (C) 2018-2019 
+by their authors and contributors and their institutional affiliations under the terms 
+of modified BSD license (see below). List of authors:
+
+    Shiqi Wang - tcwangshiqi@cs.columbia.edu
+    Kexin Pei - kpei@cs.columbia.edu
+    Justin Whitehouse - jaw2228@columbia.edu
+    Junfeng Yang - junfeng@cs.columbia.edu
+    Suman Jana - suman@cs.columbia.edu
+
+
+Thereby, the whole repository is licensed under the terms of the modified BSD license
+which is repcoduced in the following. 
+
+BSD 3-Clause License
+
+Copyright (c) 2019, Ansgar Rössig
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
