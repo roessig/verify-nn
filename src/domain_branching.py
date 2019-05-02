@@ -149,10 +149,17 @@ class DomainBranching(Branchrule):
                 raise AttributeError("Unknown split mode for domain branching.")
 
             self.branching_variables[current_scip_node.getNumber()] = split_neuron_name
-
-            # TODO select different branch variable if split range is too small
-
             split_range = split_ranges[split_neuron_name]
+
+            counter = 0
+            while split_range < self.mip.eps:
+                counter += 1
+                split_neuron_name = self.branch_nodes[(current_scip_node.getDepth() + counter) % self.number_of_inputs]
+                split_range = split_ranges[split_neuron_name]
+
+                if counter >= self.number_of_inputs:
+                    return {"result": SCIP_RESULT.DIDNOTRUN}
+
             split_neuron = self.mip.input_nodes[split_neuron_name]
             split_point = split_range / 2 + split_neuron.getLbLocal()
 

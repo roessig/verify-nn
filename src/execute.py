@@ -206,7 +206,7 @@ if __name__ == "__main__":
 
     print(model.getStatus())
     print("Total Time", model.getTotalTime())
-    model.printStatistics()
+    # model.printStatistics()         # prints statistics about the solving process
 
     sol_is_valid = False
     if (not params["use_opt_mode"] and model.getStatus() == "optimal") or (params["use_opt_mode"]
