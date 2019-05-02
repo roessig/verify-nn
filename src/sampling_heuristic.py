@@ -135,6 +135,9 @@ class SamplingHeuristic(Heur):
             # in some cases, better primal solutions could be found by continuing with the LP heuristic.
             #return {"result": SCIP_RESULT.DIDNOTFIND}
 
+        if min_input is None:  # may possibly happen if LP sol gen is used
+            return {"result": SCIP_RESULT.DIDNOTFIND}
+
         list_of_min_inputs = [min_input]
         for min_input in list_of_min_inputs:
 
