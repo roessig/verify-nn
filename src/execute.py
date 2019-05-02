@@ -115,21 +115,14 @@ if __name__ == "__main__":
     model.setIntParam("display/freq", 2)
     model.setIntParam("display/headerfreq", 2)
     model.setIntParam("presolving/maxrestarts", 0)
-
     model.setLongintParam("lp/rootiterlim", -1)
     model.setIntParam("lp/solvefreq", 1)    # 0 = only at root node, else frequency of KP solves
-
-    ## test for infeasible case
     model.setIntParam("separating/flowcover/freq", -1)
     model.setIntParam("separating/gomory/freq", -1)
     model.setIntParam("separating/cmir/freq", -1)
-    #model.setBoolParam("propagating/genvbounds/propasconss", True)
-
-
     model.setIntParam("propagating/maxroundsroot", 5)
     model.setIntParam("propagating/maxrounds", 1)
     model.setIntParam("display/verblevel", 5)
-    #model.setBoolParam("display/lpinfo", True)
 
 
     mip.add_further_constraints(optimize_nodes=params["build_optimize_nodes"],
