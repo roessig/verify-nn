@@ -211,11 +211,16 @@ if __name__ == "__main__":
     sol_is_valid = False
     if (not params["use_opt_mode"] and model.getStatus() == "optimal") or (params["use_opt_mode"]
                                         and model.getPrimalbound() <= -mip.eps):
+        print("SAT")
         print("cheking solution")
         input_values = {var.name: model.getVal(var) for var in mip.input_nodes.values()}
         print(input_values)
         sol_is_valid = check_sol(filepath, input_values)
         print("is valid:", sol_is_valid)
+
+    if (not params["use_opt_mode"] and model.getStatus() == "infeasible") or (params["use_opt_mode"]
+                                        and model.getDualbound() >= mip.eps):
+        print("UNSAT")
 
     with open(result_log_path, "a") as f:
         f.write("solution_status: " + str(model.getStatus()) + "\n")
