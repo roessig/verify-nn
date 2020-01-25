@@ -1,6 +1,6 @@
 # Verification of Neural Networks
 
-This repository contains the code for my solver for verification of neural networks as described in my Master's thesis with the same title. The thesis can be found [here](urn:nbn:de:0297-zib-74174). Furthermore, in the folder benchmarks are the test instances which were used for the computational study in the thesis. This includes the test instances for
+This repository contains the code for my solver for verification of neural networks as described in my Master's thesis with the same title which can be found [here](https://opus4.kobv.de/opus4-zib/frontdoor/index/index/docId/7417) (urn:nbn:de:0297-zib-74174). Furthermore, in the folder benchmarks are the test instances which were used for the computational study in the thesis. This includes the test instances for
 * [Neurify](https://github.com/tcwangshiqi-columbia/Neurify)
 * [BaB](https://github.com/oval-group/PLNN-verification/tree/newVersion) of Bunel et al.
 * [Reluplex](https://github.com/guykatzz/ReluplexCav2017) (for the computational experiments the [fork](https://github.com/bunelr/ReluplexCav2017/tree/e316ae8193dfe6d6f8b869e95a8502c5316b3d87) of Bunel et al. was used)
